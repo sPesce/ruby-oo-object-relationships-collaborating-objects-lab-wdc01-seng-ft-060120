@@ -19,7 +19,8 @@ class Artist
     def add_song(song)
         song.artist = self
     end
-
+    #return artist that has name: artist_name, but create it first
+    #if !exist
     def self.find_or_create_by_name(artist_name)
         artist = self.all.find{|artist_inst| artist_inst.name == artist_name}
         if artist == nil
