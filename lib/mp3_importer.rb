@@ -14,5 +14,11 @@ class MP3Importer
         Dir[real_path].map{|file| file.split("/")[-1]}           
     end
 
+    def import
+        self.files.each do |file|
+            Song.new_by_filename(file)
+        end
+    end
+
 
 end
